@@ -1,0 +1,15 @@
+[Unit]
+Description=Achadinhos da Terra - Robo Autonomo de Ofertas (Oracle Cloud)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/achadinhos_bot
+ExecStart=/usr/bin/python3 /home/ubuntu/achadinhos_bot/oracle_cloud_bot.py
+Restart=always
+RestartSec=10
+EnvironmentFile=/home/ubuntu/achadinhos_bot/.env
+
+[Install]
+WantedBy=multi-user.target
